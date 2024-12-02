@@ -17,26 +17,30 @@ Join the fun and challenge yourself with daily coding puzzles while enhancing yo
 
 ## 🚀 Quick Start
 
-**1. Fork and clone this repository**
+**1. Create your repository**
+
+Click the "Use this template" button at the top of this repository to create your own copy. You can also [learn more about creating repositories from templates](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template#creating-a-repository-from-a-template).
+
+**2. Clone your new repository**
 
 ```bash
-git clone https://github.com/yourusername/aoc-bun.git
-cd aoc-bun
+git clone https://github.com/yourusername/your-repo-name.git
+cd your-repo-name
 ```
 
-**2. Install dependencies**
+**3. Install dependencies**
 
 ```bash
 bun install
 ```
 
-**3. Set up your environment**
+**4. Set up your environment**
 
 ```bash
 cp .env.sample .env
 ```
 
-**4. Add your Advent of Code session token to `.env`**
+**5. Add your Advent of Code session token to `.env`**
 
 ```bash
 AOC_SESSION=your_session_token_here
@@ -57,13 +61,13 @@ YEAR=2024
 
 > **Note**: Keep your session token private and never commit it to version control!
 
-**5. Generate your first puzzle folder**
+**6. Generate your first puzzle folder**
 
 ```bash
 bun run generate day=1
 ```
 
-**6. Start solving!**
+**7. Start solving!**
 
 ```bash
 bun run aoc 2024 1      # Run once
