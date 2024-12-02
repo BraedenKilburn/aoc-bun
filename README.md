@@ -1,6 +1,6 @@
 # 🎄 Advent of Code - Bun Template
 
-Welcome to the Advent of Code Bun Template! This repository provides a streamlined setup for participating in the Advent of Code challenges using Bun, a modern JavaScript runtime.
+Welcome to the Advent of Code Bun Template! This repository provides a streamlined setup for participating in the Advent of Code challenges using [Bun](https://bun.sh), a fast JavaScript all-in-one toolkit.
 
 ## Why This Template is Useful
 
