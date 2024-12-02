@@ -15,45 +15,79 @@ Key features include:
 
 Join the fun and challenge yourself with daily coding puzzles while enhancing your programming skills!
 
-## Usage
+## 🚀 Quick Start
 
-To get started, clone the repository and run `bun install` in the root.
-
-Any year folder in `/src` (like `2024`, `2023` etc), are puzzle content and not part of the template.
-
-### Get your session token
-
-First thing you need is your session token from adventofcode.com. This is used to fetch your personalized input data from each puzzle. It can be found under the network tab in your dev tools. [Check this post for assistance](https://github.com/wimglenn/advent-of-code-wim/issues/1).
-
-Once you have your token, copy `.env.sample`, rename it to `.env`, and include your token in the `AOC_SESSION` spot. In your `.env` file you can also adjust what year of Advent of Code you want to work with. Defaults to 2024.
-
-### Generate a puzzle
-
-Use `bun run generate` to generate a folder for a puzzle, and fetch the input data. The script expects an argument for the day you want to work with, for example `bun run generate day=5` will generate the folder and fetch the input data for day 5.
-
-The generated folder includes the following files:
-
-- `index.ts`: The TS file to work with, lightly prepared for reading the input file.
-- `1.ts` and `2.ts`: The TS files for each part of the puzzle, lightly prepared for consuming the prepared input file.
-- `input.txt`: The raw input data for the puzzle.
-- `example.txt`: An example input file for the examples in the puzzle.
-
-## 🚀 Scripts
-
-### Run the puzzle once
+**1. Fork and clone this repository**
 
 ```bash
-bun run aoc <year> <day>
+git clone https://github.com/yourusername/aoc-bun.git
+cd aoc-bun
 ```
 
-### Run the puzzle in watch mode
+**2. Install dependencies**
 
 ```bash
-bun run aoc:watch <year> <day>
+bun install
 ```
 
-### Format the code
+**3. Set up your environment**
 
 ```bash
-bun run format
+cp .env.sample .env
 ```
+
+**4. Add your Advent of Code session token to `.env`**
+
+```bash
+AOC_SESSION=your_session_token_here
+YEAR=2024
+```
+
+**🔑 Getting Your Session Token**
+
+1. Visit [adventofcode.com](https://adventofcode.com)
+2. Open your browser's Developer Tools:
+   - Windows/Linux: Press `F12` or `Ctrl + Shift + I`
+   - macOS: Press `Cmd + Option + I`
+3. Navigate to the **Network** tab
+4. Refresh the page
+5. Click on any request to `adventofcode.com`
+6. In the request details, find the **Cookies** section
+7. Look for the `session` cookie and copy its value
+
+> **Note**: Keep your session token private and never commit it to version control!
+
+**5. Generate your first puzzle folder**
+
+```bash
+bun run generate day=1
+```
+
+**6. Start solving!**
+
+```bash
+bun run aoc 2024 1      # Run once
+bun run aoc:watch 2024 1 # Run with hot reload
+```
+
+## 📁 What You Get
+
+When you generate a new puzzle, you'll get a folder with everything you need:
+
+```
+src/2024/1/
+├── index.ts    # Main entry point
+├── 1.ts        # Part one solution
+├── 2.ts        # Part two solution
+├── input.txt   # Your puzzle input
+└── example.txt # For example test cases
+```
+
+## 💡 Pro Tips
+
+- Use `example.txt` to test your solution with the puzzle's example data
+- The template automatically measures execution time for each part
+- Hot reload with `aoc:watch` makes testing iterations quick
+- All source files are automatically formatted with `bun run format`
+
+Want to try a different year? Just update `YEAR` in your `.env` file!
